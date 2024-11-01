@@ -136,6 +136,14 @@ const Dashboard = () => {
           </div>
 
           <div className="flex items-center gap-4">
+            {/* New Login and Regiter Buttons */}
+            <button className="p-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600">
+              Login
+            </button>
+            <button className="p-2 rounded-lg bg-green-500 text-white hover:bg-green-600">
+              Register
+            </button>
+
             <div className="relative">
               <button onClick={() => setShowDropdown(!showDropdown)}>
                 <BsBell className="text-gray-600 text-lg" />
@@ -246,12 +254,12 @@ const Dashboard = () => {
                     <div className="bg-white p-6 rounded-xl shadow-md">
             <div className="flex justify-between">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Consult a Doctor</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Take Health Assessment Now</h3>
                 <p className="text-gray-500 text-sm max-w-md">
-                  Save your money by consulting with doctors and for more tips see below
+                Discover your health insights and unlock a better you with Health Check Pro!
                 </p>
                 <button className="mt-4 bg-black text-white px-4 py-2 rounded-lg text-sm transition-colors duration-300 hover:bg-gray-800">
-                  VIEW TIPS
+                  New Test
                 </button>
               </div>
               <img
@@ -263,6 +271,32 @@ const Dashboard = () => {
           </div>
 
         </main>
+
+        {/* Footer is here */}
+
+        <footer className="bg-gray-800 text-white p-4 mt-4">
+          <div className="container mx-auto flex justify-between">
+            <div>
+              <h3 className="text-lg font-semibold">About Us</h3>
+              <p className="text-sm">We are a leading company in...</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold">Contact Us</h3>
+              <p className="text-sm">Email: contact@example.com</p>
+              <p className="text-sm">Phone: (123) 456-7890</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold">Follow Us</h3>
+              <div className="flex space-x-2">
+                <a href="#" className="text-blue-400 hover:text-blue-500">Facebook</a>
+                <a href="#" className="text-blue-300 hover:text-blue-400">Twitter</a>
+                <a href="#" className="text-pink-400 hover:text-pink-500">Instagram</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+
       </div>
     </div>
   );
