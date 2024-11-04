@@ -103,19 +103,21 @@ const Dashboard = () => {
             </div>
           </div>
           
+    
+           {/* Here is the Navbar  */}
           <nav className="space-y-4">
-            {['Dashboard', 'Section', 'Score Card', 'Summary', 'Accounts', 'Settings'].map((item, i) => (
+            {['Home', 'Assessment Section', 'Score History', 'Leaderboard', 'Accounts', 'Settings'].map((item, i) => (
               <a
                 key={i}
                 href="#"
-                className={`block px-4 py-2 rounded-lg text-white/70 hover:bg-white/10 transition-colors ${
-                  i === 0 ? 'bg-white/10' : ''
-                }`}
+                className={`block px-4 py-2 rounded-lg text-white/70 hover:bg-white/10 transition-colors ${i === 0 ? 'bg-white/10' : ''
+                  }`}
               >
                 {item}
               </a>
             ))}
           </nav>
+
         </div>
       </div>
 
@@ -137,11 +139,11 @@ const Dashboard = () => {
 
           <div className="flex items-center gap-4">
             {/* New Login and Regiter Buttons */}
-            <button className="p-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600">
+            {/* <button className="p-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600">
               Login
-            </button>
+            </button> */}
             <button className="p-2 rounded-lg bg-green-500 text-white hover:bg-green-600">
-              Register
+              Sign Out
             </button>
 
             <div className="relative">
@@ -190,12 +192,14 @@ const Dashboard = () => {
 
         <main className="p-8">
           <div className="flex justify-between items-center mb-8">
-            <div>
+            {/* Reports Not needed  */}
+            {/* <div>
               <h1 className="text-2xl font-bold text-gray-900">Report</h1>
               <p className="text-gray-500">01 - 27 October, 2024</p>
-            </div>
+            </div> */}
 
-            {/* Profile Images */}
+            {/* Profile Images not needed */}
+            {/* Profile Images
             <div className="flex -space-x-2">
               {[
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_NR09b1Z8k0rMj2Phr5LpSQuxEaI8vGKDSQ&s",
@@ -210,11 +214,15 @@ const Dashboard = () => {
                   className="w-8 h-8 rounded-full border-2 border-white"
                 />
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Chart */}
+          {/* Leaderboard Heading and Chart */}
           <div className="bg-white p-6 rounded-xl shadow-md mb-8 transition-transform transform hover:scale-105">
+            {/* Leaderboard Title */}
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4 text-center">Leaderboard</h3>
+
             <ResponsiveContainer width="100%" height={200}>
               <LineChart data={chartData}>
                 <CartesianGrid strokeDasharray="3 3" />
@@ -223,6 +231,12 @@ const Dashboard = () => {
                 <Line type="monotone" dataKey="value" stroke="#3498db" />
               </LineChart>
             </ResponsiveContainer>
+          </div>
+
+
+          {/* Current Score Title */}
+          <div className="mb-4">
+            <h2 className="text-xl font-semibold text-gray-900">Your Current Score</h2>
           </div>
 
           {/* Metrics */}
@@ -239,7 +253,8 @@ const Dashboard = () => {
             ))}
           </div>
 
-          {/* Progress Bars */}
+          {/* Progress Bars Not needed */}
+          {/* Progress Bars
           <div className="mt-8">
             <h2 className="text-xl font-bold text-gray-900 mb-4">Progress Overview</h2>
             {metrics.map((metric, index) => (
@@ -248,18 +263,18 @@ const Dashboard = () => {
                 <ProgressBar value={metric.value} color={metric.color} />
               </div>
             ))}
-          </div>
+          </div> */}
 
                     {/* Consult Card */}
                     <div className="bg-white p-6 rounded-xl shadow-md">
             <div className="flex justify-between">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Take Health Assessment Now</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">You can Re-Take Assessment to update your score</h3>
                 <p className="text-gray-500 text-sm max-w-md">
                 Discover your health insights and unlock a better you with Health Check Pro!
                 </p>
                 <button className="mt-4 bg-black text-white px-4 py-2 rounded-lg text-sm transition-colors duration-300 hover:bg-gray-800">
-                  New Test
+                  Take Re-Test To Update Score
                 </button>
               </div>
               <img
